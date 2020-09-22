@@ -1584,7 +1584,6 @@
 				{ "name": "traefik.frontend.headers.customFrameOptionsValue", "value": "SAMEORIGIN"}
 			]
 		},
-		},
 		{
 			"categories": [
 				"Tools",
