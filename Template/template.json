@@ -1552,14 +1552,36 @@
 			"type": 1,
 			"volumes": [
 				{
+					"bind": "/home/tim/LazyLibrarian/config",
 					"container": "/config"
 				},
 				{
+					"bind": "/home/tim/LazyLibrarian/downloads",
 					"container": "/downloads"
 				},
 				{
+					"bind": "/home/tim/LazyLibrarian/books",
 					"container": "/books"
 				}
+			],
+			"labels": [
+				{ "name": "com.example.vendor", "value": "Acme" },
+				{ "name": "traefik.enable", "value": "true" },
+				{ "name":   "traefik.backend", "value": "LazyLibrarian"},
+				{ "name":   "traefik.frontend.rule", "value": "Host:LazyLibrarian.mullinskelley.com"},
+				{ "name":   "traefik.port", "value": "5299"},
+				{ "name":   "traefik.tags", "value": "traefik-net"},
+				{ "name":   "traefik.docker.network", "value": "traefik-net"},
+				{ "name":   "traefik.frontend.headers.SSLRedirect", "value": "true"},
+				{ "name":   "traefik.frontend.headers.STSSeconds", "value": "315360000"},
+				{ "name":   "traefik.frontend.headers.browserXSSFilter", "value": "true"},
+				{ "name":   "traefik.frontend.headers.contentTypeNosniff", "value": "true"},
+				{ "name":   "traefik.frontend.headers.forceSTSHeader", "value": "true"},},
+				{ "name":   "traefik.frontend.headers.SSLHost", "value": "LazyLibrarian.mullinskelley.com"},},
+				{ "name":   "traefik.frontend.headers.SSLForceHost", "value": "true"},
+				{ "name":   "traefik.frontend.headers.STSIncludeSubdomains", "value": "true"},
+				{ "name":   "traefik.frontend.headers.STSPreload", "value": "true"},
+				{ "name":   "traefik.frontend.headers.customFrameOptionsValue", "value": "SAMEORIGIN"}
 			]
 		},
 		{
