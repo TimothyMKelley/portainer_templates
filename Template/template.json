@@ -1534,7 +1534,7 @@
 			"type": 2,
 			"repository": {
 			  "url": "https://github.com/TimothyMKelley/portainer_templates",
-			  "stackfile": "stacks/lazylibrarian-stack.yml"
+			  "stackfile": "Template/Stack/lazylibrarian.yml"
 			}
 		},
 		{
